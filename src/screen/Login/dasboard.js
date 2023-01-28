@@ -5,7 +5,8 @@ function Dashboard() {
   let navigate = useNavigate();
   useEffect(() => {
     const token = localStorage.getItem("token");
-    if (token === null || undefined || "") {
+    console.log(token);
+    if (token === null || token === undefined || token === "") {
       navigate("/login");
     }
   });

@@ -56,6 +56,9 @@ function Register() {
       })
       .catch((err) => {
         console.log(err);
+        toast.error("Pendaftaran Gagal !", {
+          position: toast.POSITION.TOP_CENTER,
+        });
       });
   };
 

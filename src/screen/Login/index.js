@@ -41,15 +41,17 @@ function Login() {
         }
       )
       .then((res) => {
-        console.log(res);
+        console.log(res.data.data.access_token);
         localStorage.setItem("token", res.data.data.access_token);
         toast.success("Berhasil Login !", {
           position: toast.POSITION.TOP_CENTER,
         });
-        navigate("/dashboard");
+        // navigate("/dashboard");
       })
       .catch((err) => {
-        console.log(err);
+        toast.error("Gagal Login !", {
+          position: toast.POSITION.TOP_CENTER,
+        });
       });
   };
 
